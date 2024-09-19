@@ -12953,7 +12953,7 @@ a.white:hover {
   height: 100%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
+  gap: 15px;
 }
 
 .project-title-container {
@@ -12964,101 +12964,139 @@ a.white:hover {
 
 .project-title {
   background-color: #1f1f1f;
-  padding: 0px;
-  border-radius: 100px;
+  padding: 25px;
   color: white;
-  width: fit-content;
-  height: fit-content;
+  border-radius: 35px;
 }
 
-.project-body {
+.project-introduction-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: max-content;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.project-video-container {
+@media (min-width: 992px) {
+  .project-introduction-container {
+    flex-direction: row;
+  }
+}
+
+.project-introduction-text {
   background-color: #1f1f1f;
-  border-radius: 15px;
+  max-width: 100%;
   padding: 20px;
-  width: 100%;
-  margin: 35px;
-}
-
-.project-video {
-  width: 100%;
-  height: 100%;
-}
-
-.project-details {
-  background-color: #1f1f1f;
   border-radius: 25px;
-  margin-left: 25px;
-  margin-right: 25px;
-  margin-top: 35px;
-  margin-bottom: 35px;
-  padding: 10px;
-  max-width: 425px;
+  text-align: left;
 }
 
-.project-details-section {
-  margin-bottom: 10px;
+@media (min-width: 992px) {
+  .project-introduction-text {
+    max-width: 69.2%;
+  }
 }
 
 .project-details-title {
   color: white;
-  display: flex;
-  justify-content: left;
-  padding-left: 15px;
-  padding-top: 2px;
+  margin-left: 20px;
 }
 
 .project-details-divider {
   color: white;
   background-color: white;
+  width: 100%;
+}
+
+.project-introduction-skills-container {
+  background-color: #1f1f1f;
+  max-width: 100%;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+@media (min-width: 992px) {
+  .project-introduction-skills-container {
+    width: 29.2%;
+  }
+}
+
+.project-skill-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 15px;
+}
+
+.project-skill {
+  background-color: #F85C70;
+  padding: 15px;
+  border-radius: 15px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.project-skill-image {
+  width: 50px;
 }
 
 .project-details-text-container {
-  text-align: left;
-  padding-left: 10px;
-  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
 .project-details-text {
   color: white;
 }
 
-.project-details-text-link {
-  color: white;
-  background-color: #F85C70;
-  padding: 13px;
-  border-radius: 20px;
-}
-
-.project-details-text-link img {
-  width: 25px;
-}
-
-.project-details-skill-container {
+.project-details-socialmedia-container {
   display: flex;
   flex-direction: row;
-  align-content: flex-start;
+  justify-content: center;
+  margin-top: 10px;
 }
 
-.project-details-skill {
+.project-details-socialmedia-link {
   background-color: #F85C70;
-  border-radius: 7.5px;
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: fit-content;
-  height: fit-content;
+  color: white;
+  padding: 10px;
+  border-radius: 15px;
 }
 
-.project-details-skill-image {
-  max-width: 50px;
+.project-details-socialmedia-link img {
+  width: 40px;
+}
+
+.project-description-container {
+  background-color: #1f1f1f;
+  width: 100%;
+  border-radius: 25px;
+}
+
+.project-description-section {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.project-description-text {
+  color: white;
+}
+
+.project-video-container {
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 25px;
+  height: 1000px;
+  /* TODO: place the iframe correctly */
+}
+
+.project-video {
+  width: 100%;
+  height: 100%;
 }
