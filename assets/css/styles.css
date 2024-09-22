@@ -12948,6 +12948,50 @@ a.white:hover {
   justify-self: center;
 }
 
+.project-card {
+  background-color: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 10px;
+  border-radius: 15px;
+  gap: 5px;
+}
+
+.project-card hr {
+  background: rgb(248, 92, 112);
+  background: linear-gradient(90deg, rgba(248, 92, 112, 1) 0%, rgba(31, 31, 31, 1) 35%, rgba(31, 31, 31, 1) 100%);
+  width: 100%;
+  height: 2px;
+  margin: 0;
+}
+
+.project-card-title-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-card-title-container h6 {
+  margin: 0;
+  color: white;
+}
+
+.projecr-card-skill-container {
+  display: flex;
+  gap: 5px;
+}
+
+.projecr-card-skill-container img {
+  max-width: 35px;
+  max-height: 35px;
+  background-color: #3f3f3f;
+  padding: 5px;
+  border-radius: 10px;
+}
+
 .project-container {
   width: 100%;
   display: flex;
@@ -12983,7 +13027,7 @@ a.white:hover {
 .project-section-skill-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 10px;
   justify-content: flex-end;
 }
