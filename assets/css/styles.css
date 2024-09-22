@@ -12278,16 +12278,16 @@ p {
   border-radius: 0;
   padding-bottom: 4px;
   margin: 0 auto 20px;
-  max-width: 50%;
+  max-width: 90%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
+  -webkit-justify-content: center;
   -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .portfolio .filters a {
@@ -12327,7 +12327,7 @@ p {
   padding-left: 0;
   padding-right: 0;
   margin: 10px -5px;
-  overflow: hidden;
+  /* overflow: hidden; */
   border-radius: 2px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -12657,7 +12657,7 @@ pre .code {
 .header .header-content .header-title {
   font-size: calc(40px + (120 - 40) * ((100vw - 300px) / (1600 - 300)));
   font-weight: bold;
-  line-height: .7;
+  line-height: 1;
   margin-bottom: 25px;
   color: inherit;
 }
@@ -13076,6 +13076,24 @@ a.white:hover {
   aspect-ratio: 16/9;
 }
 
+.portfolio_title {
+  text-align: center;
+}
+
+@media(min-width:45rem)  {
+  .portfolio_title {
+    text-align: left;
+  }
+}
+
+.portfolio-item {
+  width: 100%;
+  transition: all .3s ease;
+
+  &:hover {
+    transform: scale(1.1) ;
+  }
+}
 /*
 .project-container {
   width: 100%;
