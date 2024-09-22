@@ -12992,6 +12992,16 @@ a.white:hover {
   border-radius: 10px;
 }
 
+.project-card-opengl-logo {
+  max-width: 65px !important;
+  max-height: 50px !important;
+}
+
+.project-card-img-big {
+  width: 500px;
+  height: 500px;
+}
+
 .project-container {
   width: 100%;
   display: flex;
