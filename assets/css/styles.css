@@ -56,6 +56,7 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  scroll-behavior: smooth;
 }
 
 article,
@@ -12966,7 +12967,7 @@ a.white:hover {
   margin: 0;
 }
 
-.project-card-title-container {
+.project-card-title-container-row {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -12974,7 +12975,22 @@ a.white:hover {
   align-items: center;
 }
 
-.project-card-title-container h6 {
+.project-card-title-container-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.project-card-title-container-column .projecr-card-skill-container {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-card-title-container-row h6,
+.project-card-title-container-column h6 {
   margin: 0;
   color: white;
 }
@@ -13023,15 +13039,29 @@ a.white:hover {
 
 .project-section-title-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   width: 100%;
-  justify-content: space-between;
   align-items: center;
+}
+
+@media (min-width: 768px) {
+  .project-section-title-container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
 }
 
 .project-section-title-container h1 {
   font-size: 50px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .project-section-title-container h1 {
+    text-align: start;
+  }
 }
 
 .project-section-skill-container {
@@ -13039,15 +13069,40 @@ a.white:hover {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;
-  justify-content: flex-end;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .project-section-skill-container {
+    justify-content: flex-end;
+  }
 }
 
 .project-section-skill-container img {
   background-color: #2f2f2f;
   padding: 10px;
   border-radius: 15px;
-  max-width: 75px;
-  max-height: 75px;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.project-skill-opengl-logo,
+.project-skill-openal-logo,
+.project-skill-physx-logo {
+  max-width: 80px !important;
+}
+
+@media (min-width: 992px) {
+  .project-section-skill-container img {
+    max-width: 75px;
+    max-height: 75px;
+  }
+
+  .project-skill-opengl-logo,
+  .project-skill-openal-logo,
+  .project-skill-physx-logo {
+    max-width: 120px !important;
+  }
 }
 
 .project-section hr {
@@ -13067,12 +13122,24 @@ a.white:hover {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;
+  align-items: center;
 }
 
 .project-section-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #F85C70;
   padding: 10px;
   border-radius: 15px;
+  min-height: 60px;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.project-section-link a {
   color: white;
 }
 
@@ -13090,7 +13157,7 @@ a.white:hover {
   text-align: center;
 }
 
-@media(min-width:45rem)  {
+@media(min-width:45rem) {
   .portfolio_title {
     text-align: left;
   }
@@ -13101,9 +13168,10 @@ a.white:hover {
   transition: all .3s ease;
 
   &:hover {
-    transform: scale(1.1) ;
+    transform: scale(1.1);
   }
 }
+
 /*
 .project-container {
   width: 100%;
