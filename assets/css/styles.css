@@ -4971,8 +4971,8 @@ input[type="button"].btn-block {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 0.8rem 1rem;
+  justify-content:space-between;
+  padding: 0.8rem 1rem;  
 }
 
 .navbar>.container,
@@ -12489,13 +12489,17 @@ pre .code {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
+  display: flex;  
   gap: 1rem;
   /* -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between; */
+  align-items: center;
   max-width: 180px;
+  &.aling-center {
+    height: 100%;
+  }
 }
 
 .social-icons .social-link {
@@ -12906,10 +12910,7 @@ a.white:hover {
 .navbar_cv_button {
   margin-right: 25px;
   margin-left: 25px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: 0;
-  padding-top: 10px;
+  padding: .5rem 2rem;
 }
 
 .navbar_display {
@@ -12918,6 +12919,7 @@ a.white:hover {
   flex-wrap: nowrap;
   justify-self: left;
   justify-content: left;
+  align-items: center;
   align-content: center;
 }
 
@@ -12944,10 +12946,12 @@ a.white:hover {
   width: 100%;
 }
 
-.aling-center {
+/* .aling-center {
+  display: flex;
+  align-items: center;
   align-self: center;
   justify-self: center;
-}
+} */
 
 .project-card {
   background-color: #1f1f1f;
