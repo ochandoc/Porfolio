@@ -4971,8 +4971,8 @@ input[type="button"].btn-block {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
-  justify-content:space-between;
-  padding: 0.8rem 1rem;  
+  justify-content: space-between;
+  padding: 0.8rem 1rem;
 }
 
 .navbar>.container,
@@ -12489,7 +12489,7 @@ pre .code {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;  
+  display: flex;
   gap: 1rem;
   /* -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
@@ -12497,6 +12497,7 @@ pre .code {
           justify-content: space-between; */
   align-items: center;
   max-width: 180px;
+
   &.aling-center {
     height: 100%;
   }
